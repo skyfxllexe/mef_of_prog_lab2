@@ -3,15 +3,10 @@
  * \brief main
  */
 
-#include <list>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <chrono>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <utility>
 #include <vector>
 #include <map>
 
