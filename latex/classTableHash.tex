@@ -1,0 +1,101 @@
+\doxysection{Table\+Hash\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classTableHash}{}\label{classTableHash}\index{TableHash$<$ T $>$@{TableHash$<$ T $>$}}
+
+
+Hash table implementation using open addressing with linear probing.  
+
+
+
+
+{\ttfamily \#include $<$tablehash.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTableHash_abe6a3304d067be479bec5cf20a905e92}{find}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Finds the list of elements with the specified key. \end{DoxyCompactList}\item 
+\Hypertarget{classTableHash_a42c3fe51fdefbfff23abdf22eec8ed1f}\label{classTableHash_a42c3fe51fdefbfff23abdf22eec8ed1f} 
+{\bfseries Table\+Hash} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classTableHash}{Table\+Hash} object with default size. \end{DoxyCompactList}\item 
+\Hypertarget{classTableHash_a5b9805fba7dff15f616acbc8854a5c11}\label{classTableHash_a5b9805fba7dff15f616acbc8854a5c11} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Table\+Hash} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classTableHash}{Table\+Hash} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTableHash_af8ce47af6897b7cfe543ead553cb873b}{add}} (T object)
+\begin{DoxyCompactList}\small\item\em Adds an object to the hash table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTableHash_a1008e13abde33d127e0ad91c84751c97}{get\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of unique keys stored in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTableHash_affd451c69cd73737070ba9e86698768d}\label{classTableHash_affd451c69cd73737070ba9e86698768d} 
+int {\bfseries size} = 100
+\begin{DoxyCompactList}\small\item\em Current capacity of the hash table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Table\+Hash$<$ T $>$}
+Hash table implementation using open addressing with linear probing. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements stored. Must have a {\ttfamily key} field of type std\+::string. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTableHash_af8ce47af6897b7cfe543ead553cb873b}\label{classTableHash_af8ce47af6897b7cfe543ead553cb873b} 
+\index{TableHash$<$ T $>$@{TableHash$<$ T $>$}!add@{add}}
+\index{add@{add}!TableHash$<$ T $>$@{TableHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classTableHash}{Table\+Hash}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{object }\end{DoxyParamCaption})}
+
+
+
+Adds an object to the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTableHash_abe6a3304d067be479bec5cf20a905e92}\label{classTableHash_abe6a3304d067be479bec5cf20a905e92} 
+\index{TableHash$<$ T $>$@{TableHash$<$ T $>$}!find@{find}}
+\index{find@{find}!TableHash$<$ T $>$@{TableHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTableHash}{Table\+Hash}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Finds the list of elements with the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the vector of matching elements. 
+\end{DoxyReturn}
+\Hypertarget{classTableHash_a1008e13abde33d127e0ad91c84751c97}\label{classTableHash_a1008e13abde33d127e0ad91c84751c97} 
+\index{TableHash$<$ T $>$@{TableHash$<$ T $>$}!get\_count@{get\_count}}
+\index{get\_count@{get\_count}!TableHash$<$ T $>$@{TableHash$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_count()}{get\_count()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classTableHash}{Table\+Hash}}$<$ T $>$\+::get\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of unique keys stored in the table. 
+
+\begin{DoxyReturn}{Returns}
+The count of keys. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tablehash.\+hpp\end{DoxyCompactItemize}

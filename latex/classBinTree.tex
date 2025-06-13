@@ -1,0 +1,122 @@
+\doxysection{Bin\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classBinTree}{}\label{classBinTree}\index{BinTree$<$ T $>$@{BinTree$<$ T $>$}}
+
+
+A generic binary search tree for storing objects with string keys.  
+
+
+
+
+{\ttfamily \#include $<$bin\+\_\+tree.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBinTree_a71073f37c32aff8f2a7f9df2a38666f7}{insert}} (T object)
+\begin{DoxyCompactList}\small\item\em Inserts an object into the binary search tree. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classBinTree_a6d68009c9aa8b8362a00ff5ff1c6063d}{find}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Finds all objects with the specified key. \end{DoxyCompactList}\item 
+\Hypertarget{classBinTree_add027888c387f87809f0fc39219cd98b}\label{classBinTree_add027888c387f87809f0fc39219cd98b} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bin\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Destructor that deletes the entire binary tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBinTree_a480e1ace2def91fc5d240c296595e26e}{delete\+Tree\+\_\+rec}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Recursively deletes nodes in the binary tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBinTree_a735869f6d5052466559f5a6c626d6ad1}{print\+Tree}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, int level)
+\begin{DoxyCompactList}\small\item\em Recursively prints the tree contents starting from a node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBinTree_a6dfe91e5bbf7e7a005e349cabeabde39}\label{classBinTree_a6dfe91e5bbf7e7a005e349cabeabde39} 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} {\bfseries root} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to the root of the binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Bin\+Tree$<$ T $>$}
+A generic binary search tree for storing objects with string keys. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements stored. Must contain a {\ttfamily key} field of type std\+::string and support {\ttfamily add\+\_\+object}. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBinTree_a480e1ace2def91fc5d240c296595e26e}\label{classBinTree_a480e1ace2def91fc5d240c296595e26e} 
+\index{BinTree$<$ T $>$@{BinTree$<$ T $>$}!deleteTree\_rec@{deleteTree\_rec}}
+\index{deleteTree\_rec@{deleteTree\_rec}!BinTree$<$ T $>$@{BinTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteTree\_rec()}{deleteTree\_rec()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBinTree}{Bin\+Tree}}$<$ T $>$\+::delete\+Tree\+\_\+rec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recursively deletes nodes in the binary tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Current node to delete. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBinTree_a6d68009c9aa8b8362a00ff5ff1c6063d}\label{classBinTree_a6d68009c9aa8b8362a00ff5ff1c6063d} 
+\index{BinTree$<$ T $>$@{BinTree$<$ T $>$}!find@{find}}
+\index{find@{find}!BinTree$<$ T $>$@{BinTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classBinTree}{Bin\+Tree}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds all objects with the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of matching objects. Returns an empty vector if key is not found. 
+\end{DoxyReturn}
+\Hypertarget{classBinTree_a71073f37c32aff8f2a7f9df2a38666f7}\label{classBinTree_a71073f37c32aff8f2a7f9df2a38666f7} 
+\index{BinTree$<$ T $>$@{BinTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!BinTree$<$ T $>$@{BinTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBinTree}{Bin\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an object into the binary search tree. 
+
+If the key already exists, the object is added to the node\textquotesingle{}s object list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBinTree_a735869f6d5052466559f5a6c626d6ad1}\label{classBinTree_a735869f6d5052466559f5a6c626d6ad1} 
+\index{BinTree$<$ T $>$@{BinTree$<$ T $>$}!printTree@{printTree}}
+\index{printTree@{printTree}!BinTree$<$ T $>$@{BinTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printTree()}{printTree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBinTree}{Bin\+Tree}}$<$ T $>$\+::print\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recursively prints the tree contents starting from a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node to print. \\
+\hline
+{\em level} & The indentation level (used for visualizing the tree). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+bin\+\_\+tree.\+hpp\end{DoxyCompactItemize}

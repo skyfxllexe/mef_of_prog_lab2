@@ -1,0 +1,76 @@
+\doxysection{Node\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classNode}{}\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+A generic node class for use in binary and red-\/black trees.  
+
+
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{void}} \mbox{\hyperlink{classNode_a7413a74bb872b443a6184adeb9b65f81}{add\+\_\+object}} (\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} \mbox{\hyperlink{classNode_a973f58fcd9c6e98657128de2e5139741}{object}})
+\begin{DoxyCompactList}\small\item\em Adds an object to the node\textquotesingle{}s object list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classNode_a973f58fcd9c6e98657128de2e5139741}\label{classNode_a973f58fcd9c6e98657128de2e5139741} 
+\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} {\bfseries object}
+\begin{DoxyCompactList}\small\item\em A single object of type T (not used in main logic, kept for compatibility). \end{DoxyCompactList}\item 
+\Hypertarget{classNode_a65e422b19d03ccdc66a246a99fe9ce45}\label{classNode_a65e422b19d03ccdc66a246a99fe9ce45} 
+std\+::string {\bfseries key}
+\begin{DoxyCompactList}\small\item\em The key used to identify this node (typically from the first object). \end{DoxyCompactList}\item 
+\Hypertarget{classNode_a5714156a85f13d692a18633e9bb88296}\label{classNode_a5714156a85f13d692a18633e9bb88296} 
+std\+::vector$<$ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$ {\bfseries objects}
+\begin{DoxyCompactList}\small\item\em A list of objects with the same key. \end{DoxyCompactList}\item 
+\Hypertarget{classNode_a38f7b7f0858b059021ad8e5201dbac0f}\label{classNode_a38f7b7f0858b059021ad8e5201dbac0f} 
+\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{int}} {\bfseries color} = 2
+\begin{DoxyCompactList}\small\item\em \doxylink{classNode}{Node} color for Red-\/\+Black Tree\+: 0 = black, 1 = red, 2 = null/uninitialized. \end{DoxyCompactList}\item 
+\Hypertarget{classNode_a6eb3b661ef0b58d46dfe228c6ea2e20b}\label{classNode_a6eb3b661ef0b58d46dfe228c6ea2e20b} 
+\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$ \texorpdfstring{$\ast$}{*} {\bfseries parent} = \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{nullptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent node. \end{DoxyCompactList}\item 
+\Hypertarget{classNode_a2841886a16c27e72b21885025c00b44b}\label{classNode_a2841886a16c27e72b21885025c00b44b} 
+\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$ \texorpdfstring{$\ast$}{*} {\bfseries left} = \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{nullptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the left child node. \end{DoxyCompactList}\item 
+\Hypertarget{classNode_ad7092450d89448320103cde1f72da320}\label{classNode_ad7092450d89448320103cde1f72da320} 
+\mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$ \texorpdfstring{$\ast$}{*} {\bfseries right} = \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{nullptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the right child node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{class}} \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}}$>$\newline
+class Node$<$ T $>$}
+A generic node class for use in binary and red-\/black trees. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object stored in the node. Must have a {\ttfamily key} field. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNode_a7413a74bb872b443a6184adeb9b65f81}\label{classNode_a7413a74bb872b443a6184adeb9b65f81} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!add\_object@{add\_object}}
+\index{add\_object@{add\_object}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add\_object()}{add\_object()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{class}} \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$ \\
+\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{void}} \mbox{\hyperlink{classNode}{Node}}$<$ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}} $>$\+::add\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}}}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an object to the node\textquotesingle{}s object list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to add. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+node.\+hpp\end{DoxyCompactItemize}

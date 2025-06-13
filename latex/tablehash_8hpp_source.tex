@@ -1,0 +1,136 @@
+\doxysection{tablehash.\+hpp}
+\hypertarget{tablehash_8hpp_source}{}\label{tablehash_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTableHash}{TableHash}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<T>*\ \mbox{\hyperlink{classTableHash_abe6a3304d067be479bec5cf20a905e92}{find}}(std::string\ key);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classTableHash_a42c3fe51fdefbfff23abdf22eec8ed1f}{TableHash}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classTableHash_a5b9805fba7dff15f616acbc8854a5c11}{\string~TableHash}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTableHash_af8ce47af6897b7cfe543ead553cb873b}{add}}(T\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTableHash_a1008e13abde33d127e0ad91c84751c97}{get\_count}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTableHash_affd451c69cd73737070ba9e86698768d}{size}}\ =\ 100;\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ resize();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<std::vector<T>>\ items;\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ a\ =\ 9;\ }
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{size\_t}\ pow(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ power)}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (power\ ==\ 1)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (power\ ==\ 0)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (power\ \&\ 1)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pow(a,\ power\ -\/\ 1)\ *\ a;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ pow(a,\ power\ /\ 2)\ *\ pow(a,\ power\ /\ 2);}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{size\_t}\ hash(std::string\ s,\ \textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ m)}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ ans\ =\ 0;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ s.size();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ ans\ +=\ ((int)s[i]\ *\ pow(a,\ size\ -\/\ 1\ -\/\ i))\ \%\ m;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ ans\ \%=\ m;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{return}\ ans;}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00094\ \mbox{\hyperlink{classTableHash_a42c3fe51fdefbfff23abdf22eec8ed1f}{TableHash<T>::TableHash}}()\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ items.resize(size);}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00099\ \mbox{\hyperlink{classTableHash_a5b9805fba7dff15f616acbc8854a5c11}{TableHash<T>::\string~TableHash}}()\ \{}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTableHash}{TableHash<T>::resize}}()\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ size\ *=\ 2;}
+\DoxyCodeLine{00105\ \ \ \ \ std::vector<std::vector<T>>\ new\_items;}
+\DoxyCodeLine{00106\ \ \ \ \ new\_items.resize(size);}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size\ /\ 2;\ i++)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ h\ =\ std::hash<std::string>\{\}(items[i][0].key)\ \%\ size;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_items[h].empty())\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ (h\ +\ 1)\ \%\ size;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ new\_items[h].resize(items[i].size());}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ items[i].size();\ j++)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ new\_items[h][j]\ =\ items[i][j];}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ items.clear();}
+\DoxyCodeLine{00125\ \ \ \ \ items\ =\ std::move(new\_items);}
+\DoxyCodeLine{00126\ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTableHash_af8ce47af6897b7cfe543ead553cb873b}{TableHash<T>::add}}(T\ \textcolor{keywordtype}{object})\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ h\ =\ std::hash<std::string>\{\}(\textcolor{keywordtype}{object}.key)\ \%\ size;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (count\ ==\ size)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ resize();}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (items[h].empty())\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (items[h][0].key\ ==\ \textcolor{keywordtype}{object}.key)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ (h\ +\ 1)\ \%\ size;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}\ (items[h].empty())\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ count\ +=\ 1;}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ items[h].resize(items[h].size()\ +\ 1);}
+\DoxyCodeLine{00154\ \ \ \ \ items[h][items[h].size()\ -\/\ 1]\ =\ object;}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00158\ std::vector<T>*\ \mbox{\hyperlink{classTableHash_abe6a3304d067be479bec5cf20a905e92}{TableHash<T>::find}}(std::string\ key)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ h\ =\ std::hash<std::string>\{\}(key)\ \%\ size;}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!items[h].empty())\{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (items[h][0].key\ ==\ key)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ (h\ +\ 1)\ \%\ size;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{return}\ \&items[h];}
+\DoxyCodeLine{00169\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTableHash_a1008e13abde33d127e0ad91c84751c97}{TableHash<T>::get\_count}}()}
+\DoxyCodeLine{00173\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ count;}
+\DoxyCodeLine{00175\ \}}
+
+\end{DoxyCode}

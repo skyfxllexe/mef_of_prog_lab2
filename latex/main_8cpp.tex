@@ -1,0 +1,77 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+main  
+
+
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include "{}employee.\+hpp"{}}\newline
+{\ttfamily \#include "{}node.\+hpp"{}}\newline
+{\ttfamily \#include "{}bin\+\_\+tree.\+hpp"{}}\newline
+{\ttfamily \#include "{}rbtree.\+hpp"{}}\newline
+{\ttfamily \#include "{}tablehash.\+hpp"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\int \mbox{\hyperlink{main_8cpp_a79852c74c939e3033bcf60f03ddd4081}{linear\+\_\+search}} (T a\mbox{[}$\,$\mbox{]}, long start, long size, std\+::string key)
+\begin{DoxyCompactList}\small\item\em Linear search function. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a3d246ed97bd2138f982593387c8daf70}\label{main_8cpp_a3d246ed97bd2138f982593387c8daf70} 
+\mbox{\hyperlink{classEmployee}{Employee}} \texorpdfstring{$\ast$}{*} {\bfseries employees}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+main 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a79852c74c939e3033bcf60f03ddd4081}\label{main_8cpp_a79852c74c939e3033bcf60f03ddd4081} 
+\index{main.cpp@{main.cpp}!linear\_search@{linear\_search}}
+\index{linear\_search@{linear\_search}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{linear\_search()}{linear\_search()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int linear\+\_\+search (\begin{DoxyParamCaption}\item[{T}]{a\mbox{[}$\,$\mbox{]},  }\item[{long}]{start,  }\item[{long}]{size,  }\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Linear search function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Array for search \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Start index for search \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of an array \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Element key to find in array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of element with key 
+\end{DoxyReturn}

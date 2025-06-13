@@ -1,0 +1,22 @@
+\doxysection{node.\+hpp}
+\hypertarget{node_8hpp_source}{}\label{node_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNode}{Node}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}}\ \mbox{\hyperlink{classNode_a973f58fcd9c6e98657128de2e5139741}{object}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ \mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{key}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ std::vector<T>\ \mbox{\hyperlink{classNode_a5714156a85f13d692a18633e9bb88296}{objects}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classNode_a38f7b7f0858b059021ad8e5201dbac0f}{color}}\ =\ 2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classNode_a6eb3b661ef0b58d46dfe228c6ea2e20b}{parent}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classNode_a2841886a16c27e72b21885025c00b44b}{left}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classNode_ad7092450d89448320103cde1f72da320}{right}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNode_a7413a74bb872b443a6184adeb9b65f81}{add\_object}}(\mbox{\hyperlink{classNode_a65e422b19d03ccdc66a246a99fe9ce45}{T}}\ \textcolor{keywordtype}{object})\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNode_a5714156a85f13d692a18633e9bb88296}{objects}}.resize(\mbox{\hyperlink{classNode_a5714156a85f13d692a18633e9bb88296}{objects}}.size()\ +\ 1);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNode_a5714156a85f13d692a18633e9bb88296}{objects}}[\mbox{\hyperlink{classNode_a5714156a85f13d692a18633e9bb88296}{objects}}.size()\ -\/\ 1]\ =\ \mbox{\hyperlink{classNode_a973f58fcd9c6e98657128de2e5139741}{object}};}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,177 @@
+\doxysection{RBTree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classRBTree}{}\label{classRBTree}\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+
+
+Red-\/\+Black Tree implementation.  
+
+
+
+
+{\ttfamily \#include $<$rbtree.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRBTree_aa1c2d89d50390e8855780342c11dd77c}\label{classRBTree_aa1c2d89d50390e8855780342c11dd77c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+RBTree} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Recursively deletes all nodes in the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a116e3518ace1afc054985f053c34ef6d}{delete\+Tree\+\_\+rec}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Recursively deletes all nodes in the tree starting from the given node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a69b3ef370253c4758c7a4a96256fa778}{rotate\+Left}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&node)
+\begin{DoxyCompactList}\small\item\em Performs a left rotation around the given node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a10fe5f1cde4d9b708236e0fd43da57f6}{rotate\+Right}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&node)
+\begin{DoxyCompactList}\small\item\em Performs a right rotation around the given node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a5b9c72cc780864146a6071f2cc946a32}{fix\+Insert}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&node)
+\begin{DoxyCompactList}\small\item\em Fixes red-\/black tree properties after insertion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a6274d52c569e6258f4b6c45f86bdd4c8}{insert}} (T object)
+\begin{DoxyCompactList}\small\item\em Inserts a new object into the red-\/black tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRBTree_a920b5fd5912ee8d12d936ac0822f8011}{print\+Tree}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, int level)
+\begin{DoxyCompactList}\small\item\em Prints the red-\/black tree to the console (for debugging). \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRBTree_a71145a7e9701a1bf178d5ec9dd793fe6}{find\+\_\+object}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Searches for a node by key and returns all associated objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRBTree_ae62b9c6b5fb4b3ee78e78d0859dde7ca}\label{classRBTree_ae62b9c6b5fb4b3ee78e78d0859dde7ca} 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} {\bfseries root} = nullptr
+\begin{DoxyCompactList}\small\item\em Root of the red-\/black tree. \end{DoxyCompactList}\item 
+\Hypertarget{classRBTree_a5c600a2c5747610f0a62a7d3d5dab195}\label{classRBTree_a5c600a2c5747610f0a62a7d3d5dab195} 
+int {\bfseries elements}
+\begin{DoxyCompactList}\small\item\em Number of elements (not directly used) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class RBTree$<$ T $>$}
+Red-\/\+Black Tree implementation. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements stored in the tree. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRBTree_a116e3518ace1afc054985f053c34ef6d}\label{classRBTree_a116e3518ace1afc054985f053c34ef6d} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!deleteTree\_rec@{deleteTree\_rec}}
+\index{deleteTree\_rec@{deleteTree\_rec}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteTree\_rec()}{deleteTree\_rec()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::delete\+Tree\+\_\+rec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recursively deletes all nodes in the tree starting from the given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to start deletion from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRBTree_a71145a7e9701a1bf178d5ec9dd793fe6}\label{classRBTree_a71145a7e9701a1bf178d5ec9dd793fe6} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!find\_object@{find\_object}}
+\index{find\_object@{find\_object}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find\_object()}{find\_object()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::find\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for a node by key and returns all associated objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a vector of objects if found, otherwise nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classRBTree_a5b9c72cc780864146a6071f2cc946a32}\label{classRBTree_a5b9c72cc780864146a6071f2cc946a32} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!fixInsert@{fixInsert}}
+\index{fixInsert@{fixInsert}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fixInsert()}{fixInsert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::fix\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fixes red-\/black tree properties after insertion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Newly inserted node. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRBTree_a6274d52c569e6258f4b6c45f86bdd4c8}\label{classRBTree_a6274d52c569e6258f4b6c45f86bdd4c8} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a new object into the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Object to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRBTree_a920b5fd5912ee8d12d936ac0822f8011}\label{classRBTree_a920b5fd5912ee8d12d936ac0822f8011} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!printTree@{printTree}}
+\index{printTree@{printTree}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printTree()}{printTree()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::print\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the red-\/black tree to the console (for debugging). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Current node. \\
+\hline
+{\em level} & Current depth level (used for indentation). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRBTree_a69b3ef370253c4758c7a4a96256fa778}\label{classRBTree_a69b3ef370253c4758c7a4a96256fa778} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::rotate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs a left rotation around the given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Reference to the node to rotate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRBTree_a10fe5f1cde4d9b708236e0fd43da57f6}\label{classRBTree_a10fe5f1cde4d9b708236e0fd43da57f6} 
+\index{RBTree$<$ T $>$@{RBTree$<$ T $>$}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!RBTree$<$ T $>$@{RBTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classRBTree}{RBTree}}$<$ T $>$\+::rotate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs a right rotation around the given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Reference to the node to rotate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rbtree.\+hpp\end{DoxyCompactItemize}
